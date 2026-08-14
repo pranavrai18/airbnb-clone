@@ -668,10 +668,10 @@ export default function Navbar() {
         {/* Bottom Expanded SearchBar Row (Integrated inside Header on Homepage with smooth CSS transition) */}
         {isHome && (
           <div
-            className={`w-full overflow-hidden transition-all duration-300 ease-in-out ${
+            className={`w-full transition-all duration-300 ease-in-out ${
               isScrolled
-                ? "max-h-0 opacity-0 pointer-events-none mt-0 pb-0 pt-0"
-                : "max-h-[160px] opacity-100 mt-2.5 pb-4 pt-0"
+                ? "max-h-0 opacity-0 pointer-events-none mt-0 pb-0 pt-0 overflow-hidden"
+                : "max-h-[160px] opacity-100 mt-2.5 pb-4 pt-0 overflow-visible"
             }`}
           >
             <SearchBar onSearch={(params) => setSearchFilter(params)} />
